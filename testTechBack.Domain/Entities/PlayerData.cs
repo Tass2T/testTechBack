@@ -14,4 +14,13 @@ public class PlayerData
     public int Age {get; set;}
 
     public List<int> Last {get; set;} = [];
+
+    public PlayerData (int rank, int points, int weight, int height, int age, List<int> last) {
+        Rank = rank;
+        Points = points;
+        Weight = weight;
+        Height = height;
+        Age = age;
+        Last = last;
+    }
 }

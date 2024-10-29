@@ -25,7 +25,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj": {
+                "projectPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -58,6 +62,116 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/testTechBack.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/testTechBack.Domain.csproj",
+        "projectName": "testTechBack.Domain",
+        "projectPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/testTechBack.Domain.csproj",
+        "packagesPath": "/Users/brunogriveau/.nuget/packages/",
+        "outputPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/brunogriveau/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj",
+        "projectName": "testTechBack.Infrastructure",
+        "projectPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj",
+        "packagesPath": "/Users/brunogriveau/.nuget/packages/",
+        "outputPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/brunogriveau/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/testTechBack.Domain.csproj": {
+                "projectPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Domain/testTechBack.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

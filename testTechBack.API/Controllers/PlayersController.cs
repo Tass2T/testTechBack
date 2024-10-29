@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using testTechBack.Infrastructure.Repositories;
 
 namespace testTechBack.API.Controllers
 {
@@ -10,9 +11,20 @@ namespace testTechBack.API.Controllers
     public class PlayersController : ControllerBase
     {
         [HttpGet]
-        public IResult getPlayers () 
+        public IResult getPlayers ([FromServices] IPlayersRepository playersRepository) 
         {
-            return Results.Ok('Ok');
+            var players = playersRepository.GetAllPlayers();
+
+            return Results.Ok(players.OrderByDescending(o => o.Data.Rank));
+        }
+
+        [HttpGet("{id}")]
+        public IResult getPlayerById ([FromServices] IPlayersRepository playersRepository, [FromRoute] int id)
+        {
+            var player = playersRepository.GetPlayerById(id);
+            if (player == null) return Results.NotFound();
+            
+            return Results.Ok(player); 
         }
     }
 }

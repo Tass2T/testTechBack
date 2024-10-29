@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "testTechBack.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/testTechBack.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/testTechBack.Domain.dll": {}
+        }
+      },
+      "testTechBack.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "testTechBack.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/testTechBack.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/testTechBack.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -420,11 +443,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "testTechBack.Domain/1.0.0": {
+      "type": "project",
+      "path": "../testTechBack.Domain/testTechBack.Domain.csproj",
+      "msbuildProject": "../testTechBack.Domain/testTechBack.Domain.csproj"
+    },
+    "testTechBack.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../testTechBack.Infrastructure/testTechBack.Infrastructure.csproj",
+      "msbuildProject": "../testTechBack.Infrastructure/testTechBack.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "testTechBack.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -451,7 +485,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj": {
+              "projectPath": "/Users/brunogriveau/Perso/testTechBack/testTechBack.Infrastructure/testTechBack.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
