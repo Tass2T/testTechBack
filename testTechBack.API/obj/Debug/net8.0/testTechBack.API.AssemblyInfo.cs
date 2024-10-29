@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testTechBack.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b5425c1623c609bd63c10fc08a751517a6e4fe7")]
 [assembly: System.Reflection.AssemblyProductAttribute("testTechBack.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testTechBack.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
