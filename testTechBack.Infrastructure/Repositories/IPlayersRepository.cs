@@ -7,4 +7,6 @@ public interface IPlayersRepository
     public List<Player> GetAllPlayers();
 
     public Player? GetPlayerById(int id);
+
+    public Stats GetStats();
 }

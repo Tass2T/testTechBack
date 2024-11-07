@@ -26,6 +26,15 @@ namespace testTechBack.API.Controllers
             
             return Results.Ok(player); 
         }
+
+        [HttpGet("stats")]
+        public IResult getVariousDatas([FromServices] IPlayersRepository playersRepository)
+        {
+            var stats = playersRepository.GetStats();
+
+            if (stats == null) return Results.Problem(":(");
+            return Results.Ok(stats);
+        }
     }
 }
 

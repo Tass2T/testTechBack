@@ -7,11 +7,12 @@ public class PlayersRepository : IPlayersRepository
 {
 
     private readonly List<Player> players = [
-        new Player( 52, "Novak", "Djokovic", "M",
+        new Player( 
+            52, "Novak", "Djokovic", "M",
             new Country("SRB", "https://data.latelier.co/training/tennis_stats/resources/Serbie.png"),
             new PlayerData(2, 2542, 80000, 188, 31, new List<int> { 1, 1, 1, 1, 1 })
-            ),
-            new Player(
+        ),
+        new Player( 
             95, "Venus", "Williams", "F",
             new Country("USA", "https://data.latelier.co/training/tennis_stats/resources/USA.png"),
             new PlayerData(52, 1105, 74000, 185, 38, new List<int> { 0, 1, 0, 0, 1 })
@@ -40,5 +41,19 @@ public class PlayersRepository : IPlayersRepository
     public Player? GetPlayerById(int id)
     {
         return players.FirstOrDefault(player => player.Id == id);
+    }
+
+    public Stats GetStats()
+    {
+        var playersListByLastWin = players.OrderByDescending(player => player.Data.Last.Sum()).ToList();
+        var playersListBySize = players.OrderBy(player => player.Data.Height).ToList();
+        var countryWithMostWins = playersListByLastWin[0].Country.CountryName;
+
+        var nbOfPlayer = players.Count;
+        var medianIndex = nbOfPlayer % 2 == 0 ? ((nbOfPlayer / 2) + 1) : ((nbOfPlayer + 1) / 2);
+        var medianSize = playersListBySize[medianIndex - 1].Data.Height;
+
+        return new Stats(countryWithMostWins, [], medianSize);
+
     }
 }
